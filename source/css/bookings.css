@@ -1,0 +1,141 @@
+/* General Reset and Styling */
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.booking-container {
+    max-width: 900px;
+    width: 100%;
+    margin: auto;
+    text-align: center;
+}
+
+h1 {
+    color: #1a73e8;
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-shadow: 1px 1px 2px rgba(26, 115, 232, 0.3);
+}
+
+/* Hotel Card Styling */
+.hotel-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #ffffff;
+    border: none;
+    border-radius: 12px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin: 16px 0;
+    transition: transform 0.3s, box-shadow 0.3s;
+    overflow: hidden;
+    position: relative;
+}
+
+.hotel-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+}
+
+/* Hotel Information */
+.hotel-info {
+    text-align: left;
+    max-width: 70%;
+}
+
+.hotel-info h2 {
+    font-size: 1.6em;
+    color: #333;
+    margin: 0;
+    font-weight: 600;
+    transition: color 0.3s;
+}
+
+.hotel-info h2:hover {
+    color: #1a73e8;
+    cursor: pointer;
+}
+
+.location, .review-score, .review-summary {
+    color: #666;
+    font-size: 0.95em;
+    margin: 8px 0;
+}
+
+.location {
+    font-weight: 500;
+}
+
+.review-score {
+    font-weight: bold;
+    color: #388e3c;
+}
+
+.review-summary {
+    color: #999;
+}
+
+/* Show Prices Button */
+.show-prices {
+    background-color: #1a73e8;
+    color: #ffffff;
+    border: none;
+    border-radius: 8px;
+    padding: 12px 20px;
+    font-size: 1em;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+    position: relative;
+    overflow: hidden;
+}
+
+.show-prices::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 300%;
+    height: 300%;
+    background-color: rgba(255, 255, 255, 0.15);
+    border-radius: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    transition: transform 0.5s ease;
+}
+
+.show-prices:hover {
+    background-color: #0c5bbf;
+    transform: scale(1.05);
+}
+
+.show-prices:hover::before {
+    transform: translate(-50%, -50%) scale(1);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .hotel-card {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .hotel-info {
+        max-width: 100%;
+        margin-bottom: 12px;
+    }
+
+    .show-prices {
+        width: 100%;
+        padding: 14px 0;
+        font-size: 1.1em;
+    }
+}

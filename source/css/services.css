@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: Poppins;
+}
+
+.services-container {
+    width: 100%;
+    max-width: 1200px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    margin-left: 10%;    
+
+}
+
+.services-container h1 {
+    font-size: 4.5rem;
+    color: #ffffff;
+    margin: 2rem;
+}
+.services-container a {
+    color:rgb(16, 0, 241);
+    font-style: none;
+}
+
+.service-box {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 1.5rem;
+    margin: 10px;    
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width:500px;
+    height: auto;
+    display: inline-block;
+    vertical-align: top;
+}
+
+.service-box:hover {
+    transform: translateY(-8px); /* Slightly lift the box */
+    background-color: #ffffffbe;
+    color: black;
+
+}
+
+
+.service-box img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    max-height: 150px;
+    object-fit: cover;
+}
+
+.service-box h2 {
+    font-size: 1.5rem;
+    color: #333;
+    margin-top: 1rem;
+}
+
+.service-box p {
+    font-size: 1rem;
+    color: #666;
+    margin-top: 0.5rem;
+}
+
+.service-box:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 768px) {
+    .service-box {
+        width: calc(50% - 2rem);
+    }
+}
+
+@media (max-width: 500px) {
+    .service-box {
+        width: 100%;
+        margin: 0.5rem 0;
+    }
+}
