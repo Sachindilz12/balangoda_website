@@ -43,6 +43,11 @@ $conn->close();
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="source/css/main.css">
     <link rel="stylesheet" href="source/css/home.css">
+
+
+
+
+    
     <title>Home - Balangoda Website</title>
 </head>
 <body>
@@ -72,6 +77,40 @@ $conn->close();
     Best performing Municipal Council in 2005:
         In the year 2005, the Balangoda Municipal Council won the first place in the island in the local government category in the National Productivity Competition organized by the National Productivity Secretariat. Necessary documents are noted on the boards of the Municipal Council office and the services are provided to the people very quickly. Also, printed community response forms and the electronic community response system, which is used for the first time in Sri Lanka, will also be used to get people's opinions. The Balangoda Municipal Council has been able to respond within 48 hours through the electronic community response system. An opportunity to get the applications, information, etc. to be obtained from the Municipal Council is provided through this official website. Through the official blog of the Municipal Council, we have provided an opportunity to inform the people about the activities carried out by the Municipal Council very quickly and to comment on them. Also, through social networking websites like Facebook, Twitter, Youtube etc., the people have been given the opportunity to communicate directly with our municipal council and get information. Balangoda Municipal Council is the first municipality in Sri Lanka to connect with people through social networking sites.
     </p>
+    <div id="map" style="height: 500px; width: 100%; margin-top: 20px;"></div>
+<button onclick="getLocation()" style="display: block; margin: 20px auto;background-color: #4CAF50; color: white; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer; font-size: 16px;">Get Location</button>
+<div id="location" style="text-align: center; font-weight: bold;"></div>
+
+
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB-ykqvBfiFzqHZThbJSEJz-qDWaB3PRu4"></script>
+<script>
+    var map;
+    var infoWindow;
+
+    function initMap() {
+        map = new google.maps.Map(document.getElementById('map'), {
+            center: { lat: 6.647770304059926, lng: 80.70128117190956 }, 
+            zoom: 16
+        });
+        infoWindow = new google.maps.InfoWindow;
+    }
+    function getLocation() {
+        
+        var fixedLocation = {
+            lat: 6.647770304059926,
+            lng: 80.70128117190956
+        };
+
+        infoWindow.setPosition(fixedLocation);
+        infoWindow.setContent('Balangoda Town');
+        infoWindow.open(map);
+        map.setCenter(fixedLocation);
+        document.getElementById("location").innerHTML = "Location Updated";
+    }
+
+    window.onload = initMap;
+</script>
+
 </div>
 </main>
        
@@ -107,10 +146,18 @@ $conn->close();
         </div>
     
 
+     
+
+
     <div class="footer">
         <div class="footer1">
             <p>E-Balangoda - 2024. All rights reserved. The content, images, and materials on this website are protected by copyright law and may not be used, reproduced, or distributed without permission.</p>
         </div>
     </div>
+
+
+
+
+
 </body>
 </html>

@@ -15,7 +15,7 @@
         <h2>Restaurants</h2>
         <div class="business-card">
             <div class="business-image">
-                <img src="source/Images/Delicious Eats.png" alt="Delicious Eats">
+                <img src="source/Images/Delicious_Eats.png" alt="Delicious Eats">
             </div>
             <div class="business-details">
                 <h3>Delicious Eats</h3>
@@ -28,7 +28,7 @@
 
         <div class="business-card">
             <div class="business-image">
-                <img src="images/fresh_bites.jpg" alt="Fresh Bites">
+                <img src="source/Images/Fresh_Bites.png" alt="Fresh Bites">
             </div>
             <div class="business-details">
                 <h3>Fresh Bites</h3>
@@ -42,7 +42,7 @@
     <h2>Cafes</h2>
     <div class="business-card">
         <div class="business-image">
-            <img src="source/Images/Coffee Haven.png" alt="Coffee Haven">
+            <img src="source/Images/Coffee_Haven.png" alt="Coffee Haven">
         </div>
         <div class="business-details">
             <h3>Coffee Haven</h3>
@@ -54,7 +54,7 @@
     </div>
     <div class="business-card">
         <div class="business-image">
-            <img src="source/Images/Sweet Treats Cafe.png" alt="Sweet Treats Cafe">
+            <img src="source/Images/Sweet_Treats.png" alt="Sweet Treats Cafe">
         </div>
         <div class="business-details">
             <h3>Sweet Treats Cafe</h3>
@@ -70,7 +70,7 @@
     <h2>Fitness Centers</h2>
     <div class="business-card">
         <div class="business-image">
-            <img src="source/Images/Fit Life Gym.png" alt="Fit Life Gym">
+            <img src="source/Images/Fit_Life_Gym.png" alt="Fit Life Gym">
         </div>
         <div class="business-details">
             <h3>Fit Life Gym</h3>
@@ -82,7 +82,7 @@
     </div>
     <div class="business-card">
         <div class="business-image">
-            <img src="source/Images/Yoga Bliss Studio.png" alt="Yoga Bliss Studio">
+            <img src="source/Images/Yoga_Bliss_Studio.png" alt="Yoga Bliss Studio">
         </div>
         <div class="business-details">
             <h3>Yoga Bliss Studio</h3>
@@ -98,7 +98,7 @@
     <h2>Shopping</h2>
     <div class="business-card">
         <div class="business-image">
-            <img src="source/Images/Trendy Styles Boutique.png" alt="Trendy Styles Boutique">
+            <img src="source/Images/Trendy_Styles.png" alt="Trendy Styles Boutique">
         </div>
         <div class="business-details">
             <h3>Trendy Styles Boutique</h3>
@@ -110,7 +110,7 @@
     </div>
     <div class="business-card">
         <div class="business-image">
-            <img src="source/Images/Gadget World.png" alt="Gadget World">
+            <img src="source/Images/Gadget_World.png" alt="Gadget World">
         </div>
         <div class="business-details">
             <h3>Gadget World</h3>
@@ -126,7 +126,7 @@
     <h2>Health Services</h2>
     <div class="business-card">
         <div class="business-image">
-            <img src="source/Images/Health First Clinic.png" alt="Health First Clinic">
+            <img src="source/Images/Health_Clinic.png" alt="Health First Clinic">
         </div>
         <div class="business-details">
             <h3>Health First Clinic</h3>
@@ -138,7 +138,7 @@
     </div>
     <div class="business-card">
         <div class="business-image">
-            <img src="source/Images/Dental Care Center.png" alt="Dental Care Center">
+            <img src="source/Images/Dental_Center.png" alt="Dental Care Center">
         </div>
         <div class="business-details">
             <h3>Dental Care Center</h3>

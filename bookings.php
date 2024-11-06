@@ -29,11 +29,11 @@
     <!-- Hotel 1 -->
     <div class="hotel-card">
         <div class="hotel-image">
-            <img src="images/marino_beach.jpg" alt="Marino Beach Colombo">
+            <img src="images/marino_beach.jpg" alt="Breeze Resort">
         </div>
         <div class="hotel-info">
-            <h2>Marino Beach Colombo</h2>
-            <p class="location">Colombo - 3.8 km from downtown</p>
+            <h2>Breeze Resort</h2>
+            <p class="location">Balangoda - 3.8 km from downtown</p>
             <p class="review-score">Score: 9.1 - Wonderful</p>
             <p class="review-summary">9,596 reviews - Cleanliness: 9.4</p>
         </div>
@@ -43,11 +43,11 @@
     <!-- Hotel 2 -->
     <div class="hotel-card">
         <div class="hotel-image">
-            <img src="images/cinnamon_grand.jpg" alt="Cinnamon Grand Colombo">
+        <img src="source/Images/Mountain_Top_Inn.png" alt="ss">
         </div>
         <div class="hotel-info">
-            <h2>Cinnamon Grand Colombo</h2>
-            <p class="location">Colombo - 4.5 km from downtown</p>
+            <h2>Mountain Top Inn</h2>
+            <p class="location">Balangoda - 4.5 km from downtown</p>
             <p class="review-score">Score: 8.9 - Excellent</p>
             <p class="review-summary">7,350 reviews - Cleanliness: 9.2</p>
         </div>
@@ -57,11 +57,11 @@
     <!-- Hotel 3 -->
     <div class="hotel-card">
         <div class="hotel-image">
-            <img src="images/galle_face_hotel.jpg" alt="Galle Face Hotel">
+        <img src="source/Images/Breeze_Resort.png" alt="">
         </div>
         <div class="hotel-info">
-            <h2>Galle Face Hotel</h2>
-            <p class="location">Colombo - 2.0 km from downtown</p>
+            <h2>Leaf Hotel</h2>
+            <p class="location">Balangoda - 2.0 km from downtown</p>
             <p class="review-score">Score: 9.3 - Superb</p>
             <p class="review-summary">12,500 reviews - Cleanliness: 9.6</p>
         </div>
@@ -71,11 +71,11 @@
     <!-- Hotel 4 -->
     <div class="hotel-card">
         <div class="hotel-image">
-            <img src="images/shangri_la.jpg" alt="Shangri-La Colombo">
+        <img src="source/Images/Paradise_Suites.png" alt="">
         </div>
         <div class="hotel-info">
-            <h2>Shangri-La Colombo</h2>
-            <p class="location">Colombo - 1.5 km from downtown</p>
+            <h2>Paradise Suites</h2>
+            <p class="location">Balangoda - 1.5 km from downtown</p>
             <p class="review-score">Score: 9.0 - Exceptional</p>
             <p class="review-summary">10,210 reviews - Cleanliness: 9.5</p>
         </div>
@@ -85,11 +85,11 @@
     <!-- Hotel 5 -->
     <div class="hotel-card">
         <div class="hotel-image">
-            <img src="images/hilton_colombo.jpg" alt="Hilton Colombo">
+            <img src="source/Images/City_Hotel.png" alt="">
         </div>
         <div class="hotel-info">
-            <h2>Hilton Colombo</h2>
-            <p class="location">Colombo - 2.2 km from downtown</p>
+            <h2>City Hotel</h2>
+            <p class="location">Balangoda - 2.2 km from downtown</p>
             <p class="review-score">Score: 8.8 - Excellent</p>
             <p class="review-summary">9,000 reviews - Cleanliness: 9.1</p>
         </div>
