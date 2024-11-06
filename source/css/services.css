@@ -6,9 +6,36 @@
     box-sizing: border-box;
 }
 
-body{
-    font-family: Poppins;
+
+
+
+.balangoda {
+    font-size: 55px; 
+    font-family:Poppins;
+    text-align: right;
+    letter-spacing:2.5px;
+    margin-left: 620px; 
+    color: #018ba7;
 }
+
+.logo-container h1 {
+    font-size: 19px; 
+    margin: 0;
+    text-align: right;
+    font-family: Bungee Tint;
+    line-height: 1;
+
+}
+
+
+
+
+
+
+
+
+
+
 
 .services-container {
     width: 100%;

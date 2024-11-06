@@ -43,14 +43,9 @@ $conn->close();
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="source/css/main.css">
     <link rel="stylesheet" href="source/css/home.css">
-
-
-
+    <title>Home - Balangoda Website</title>
 
     
-    <title>Home - Balangoda Website</title>
-</head>
-<body>
     <header>
     <div class="logo-container">
         <img src="source/Images/logo.png" alt="Balangoda Municipal Council Logo" class="logo">
@@ -67,6 +62,9 @@ $conn->close();
             </ul>  
         </nav>
     </header>
+</head>
+<body>
+    
  
     <main>
         <div class="content">

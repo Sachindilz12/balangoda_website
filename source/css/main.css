@@ -68,7 +68,23 @@
         height: 150px;
     }
     
+    .balangoda {
+        font-size: 90px; 
+        font-family:Bebas Neue;
+        text-align: right;
+        letter-spacing:2.5px;
+        margin-left: 670px; 
+        color: #018ba7;
+    }
     
+    .logo-container h1 {
+        font-size: 31px; 
+        margin: 0;
+        text-align: right;
+        font-family: Bungee Tint;
+        line-height: 1;
+    
+    }
    
     
 
