@@ -3,26 +3,36 @@ session_start();
 require 'database.php'; 
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    // Get the posted username and password
     $username = $_POST['username'];
     $password = $_POST['password'];
 
-    
+    // Prepare a statement to select user data based on the provided username
     $stmt = $conn->prepare("SELECT * FROM users WHERE username = ?");
     $stmt->bind_param("s", $username);
     $stmt->execute();
     $result = $stmt->get_result();
 
+    // Check if the user exists
     if ($result->num_rows > 0) {
         $user = $result->fetch_assoc();
+        
+        // Verify the password using password_verify()
         if (password_verify($password, $user['password'])) {
+            // Set session variables for the logged-in user
             $_SESSION['user_id'] = $user['id']; 
-            header("Location: home.php"); 
-            exit(); 
+            $_SESSION['username'] = $user['username']; 
+
+            // Redirect to the home page
+            header("Location: home.php");
+            exit();
         } else {
-            echo "Invalid password.";
+            // Invalid password
+            $error_message = "Invalid password.";
         }
     } else {
-        echo "User not found.";
+        // User not found
+        $error_message = "User not found.";
     }
     $stmt->close();
 }

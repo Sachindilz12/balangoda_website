@@ -45,7 +45,32 @@ $conn->close();
     <link rel="stylesheet" href="source/css/home.css">
     <title>Home - Balangoda Website</title>
 
-    
+<style>
+    .gallery {
+    width: 100%;
+    margin-top:20px;
+    height: 60vmin;
+    display: flex;
+    gap: 5px;
+}
+
+/* Gallery Images */
+.gallery img {
+    height: 100%;
+    overflow: hidden;
+    flex: 1;
+    object-fit: cover;
+    border-radius: 8px;
+    cursor: pointer;
+    transition:all 0.3s ;
+}
+
+/* Hover Effect */
+.gallery img:hover {
+    flex:4;
+}
+
+</style>
     <header>
     <div class="logo-container">
         <img src="source/Images/logo.png" alt="Balangoda Municipal Council Logo" class="logo">
@@ -64,9 +89,19 @@ $conn->close();
     </header>
 </head>
 <body>
-    
+<div class="gallery">
+    <img src="source/Images/image1.jpeg" alt="Image 1">
+    <img src="source/Images/image2.jpeg" alt="Image 2">
+    <img src="source/Images/image3.jpeg" alt="Image 3">
+    <img src="source/Images/image4.jpeg" alt="Image 4">
+    <img src="source/Images/image5.jpeg" alt="Image 5">
+
+</div>
  
     <main>
+
+
+
         <div class="content">
     <h2> Welcome to the official website of Balangoda Municipal Council.</h2>
     <p>

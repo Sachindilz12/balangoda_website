@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 06, 2024 at 02:47 AM
+-- Generation Time: Nov 07, 2024 at 10:28 AM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -29,13 +29,21 @@ SET time_zone = "+00:00";
 
 CREATE TABLE `complaints` (
   `id` int(11) NOT NULL,
-  `user_id` varchar(50) NOT NULL,
+  `username` varchar(50) NOT NULL,
   `complaint_text` text NOT NULL,
   `status` varchar(20) DEFAULT 'Pending',
-  `created_at` datetime DEFAULT current_timestamp(),
+  `progress_status` varchar(20) DEFAULT 'Submitted',
   `attachment` varchar(255) DEFAULT NULL,
-  `progress_status` varchar(50) DEFAULT 'Submitted'
+  `created_at` timestamp NOT NULL DEFAULT current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `complaints`
+--
+
+INSERT INTO `complaints` (`id`, `username`, `complaint_text`, `status`, `progress_status`, `attachment`, `created_at`) VALUES
+(4, 'kamal', 'dasasad', 'Pending', 'Submitted', 'uploads/Screenshot (16).png', '2024-11-07 08:52:34'),
+(5, 'kamal', 'sasas', 'Pending', 'Submitted', 'uploads/Screenshot (10).png', '2024-11-07 08:53:23');
 
 -- --------------------------------------------------------
 
@@ -71,16 +79,17 @@ CREATE TABLE `requests` (
   `request_type` varchar(255) NOT NULL,
   `description` text NOT NULL,
   `priority` enum('Urgent','High','Medium','Low') NOT NULL,
-  `status` enum('Submitted','In Progress','Completed') DEFAULT 'Submitted',
-  `attachment` varchar(255) NOT NULL
+  `status` varchar(50) DEFAULT 'Submitted',
+  `attachment` varchar(255) DEFAULT NULL,
+  `submitted_at` timestamp NOT NULL DEFAULT current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `requests`
 --
 
-INSERT INTO `requests` (`id`, `request_type`, `description`, `priority`, `status`, `attachment`) VALUES
-(1, 'Garbage Collection', 'sad', 'Urgent', 'Submitted', 'uploads/');
+INSERT INTO `requests` (`id`, `request_type`, `description`, `priority`, `status`, `attachment`, `submitted_at`) VALUES
+(1, 'Birth Certificate', 'dsadsad', 'High', 'Submitted', 'uploads/Screenshot (16).png', '2024-11-07 09:27:04');
 
 -- --------------------------------------------------------
 
@@ -99,7 +108,8 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `username`, `password`) VALUES
-(13, 'sachin', '$2y$10$zfmYh1aUkFurAatq8n56mev5waT0T2k62yIobzL//IJpaYtZbFMhu');
+(13, 'sachin', '$2y$10$zfmYh1aUkFurAatq8n56mev5waT0T2k62yIobzL//IJpaYtZbFMhu'),
+(14, 'kamal', '$2y$10$yL3i4..AHesJpmUzQnjsEOTa8Yj4larLivZeCgMP0BBvuTbzLnu9m');
 
 --
 -- Indexes for dumped tables
@@ -138,7 +148,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `complaints`
 --
 ALTER TABLE `complaints`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT for table `messages`
@@ -156,7 +166,7 @@ ALTER TABLE `requests`
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

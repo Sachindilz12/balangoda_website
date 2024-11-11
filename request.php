@@ -19,10 +19,28 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $priority = $_POST['priority'];
     $status = 'Submitted';
     
-    $file = $_FILES['attachment'];
-    $file_path = 'uploads/' . basename($file['name']);
-    move_uploaded_file($file['tmp_name'], $file_path);
+    // Initialize the file path
+    $file_path = null;
 
+    // Handle file upload
+    if (isset($_FILES['attachment']) && $_FILES['attachment']['error'] == 0) {
+        $target_dir = 'uploads/';
+
+        // Check if the directory exists, if not, create it
+        if (!is_dir($target_dir)) {
+            mkdir($target_dir, 0777, true); // 0777 gives full permissions
+        }
+
+        // Define the target file path
+        $file_path = $target_dir . basename($_FILES['attachment']['name']);
+
+        // Move the uploaded file to the target directory
+        if (!move_uploaded_file($_FILES['attachment']['tmp_name'], $file_path)) {
+            echo "Error: File upload failed.";
+        }
+    }
+
+    // Insert the request into the database
     $stmt = $conn->prepare("INSERT INTO requests (request_type, description, priority, status, attachment) VALUES (?, ?, ?, ?, ?)");
     $stmt->bind_param("sssss", $request_type, $description, $priority, $status, $file_path);
     $stmt->execute();
@@ -88,7 +106,13 @@ $conn->close();
                         <td><?php echo htmlspecialchars($row['description']); ?></td>
                         <td><?php echo htmlspecialchars($row['priority']); ?></td>
                         <td><?php echo htmlspecialchars($row['status']); ?></td>
-                        <td><a href="<?php echo htmlspecialchars($row['attachment']); ?>" target="_blank">View</a></td>
+                        <td>
+                            <?php if ($row['attachment']): ?>
+                                <a href="<?php echo htmlspecialchars($row['attachment']); ?>" target="_blank">View</a>
+                            <?php else: ?>
+                                No attachment
+                            <?php endif; ?>
+                        </td>
                     </tr>
                 <?php endwhile; ?>
             </tbody>

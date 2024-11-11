@@ -4,7 +4,6 @@
 
 body {
     font-family: Poppins;
-    background-color: #f9f9f9;
     margin: 0;
     padding: 0;
 }
@@ -13,12 +12,13 @@ body {
     width: 80%;
     margin: auto;
     overflow: hidden;
+    background-color: #000000a9;
 }
 
 h1 {
     text-align: center;
     margin: 20px 0;
-    color: #000000;
+    color: #ffffff;
 }
 
 table {
@@ -37,10 +37,10 @@ th, td {
 }
 
 th {
-    background-color: #007bff;
+    background-color: #3a3a3abe;
     color: white;
 }
 
 tr:hover {
-    background-color: #000000;
+    background-color: #ff070793;
 }

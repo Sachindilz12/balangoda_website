@@ -9,19 +9,25 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $stmt->bind_param("ss", $username, $password);
     
     if ($stmt->execute()) {
-        echo "Signup successful! You can now <a href='login.php'>login</a>.";
+        // Redirect to login.php after signup is successful
+        header("Location: login.php");
+        exit(); // Ensure the script stops after redirection
     } else {
         echo "Error: " . $stmt->error;
     }
 }
 ?>
 
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    
     <meta charset="UTF-8">
     <title>Sign Up</title>
     <link rel="stylesheet" href="source/css/signup.css"> 
+    <link rel="stylesheet" href="source/css/main.css"> 
+
 </head>
 <body>
     <div class="center fade"> 

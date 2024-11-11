@@ -9,7 +9,6 @@
 
 </head>
 
-<body>
 <header>
     <div class="logo-container">
         <img src="source/Images/logo.png" alt="Balangoda Municipal Council Logo" class="logo">
@@ -21,11 +20,14 @@
         <ul>
                 <li><a href="home.php">Home</a></li>
                 <li><a href="services.php">Services</a></li>
-                <li><a href="stats.php">Statistics</a></li>
+                <li><a href="events.php">Events</a></li>
                 <li><a href="logout.php">Logout</a></li>
             </ul>  
         </nav>
     </header>
+    
+<body>
+
     <div class="services-container">
         <h1>Our Services</h1>
         <div class="service-box">
@@ -54,6 +56,11 @@
             <img src="source/Images/accomodation.png" alt="Accommodation Options">
             <h2><a href="bookings.php">Accommodation Options</a></h2>
             <p>Discover hotels and guesthouses with booking information and ratings.</p>
+        </div>
+        <div class="service-box">
+            <img src="source/Images/location.png" alt="Locations">
+            <h2><a href="locations.php">Locations</a></h2>
+            <p>Discover the for travelling and make adventures</p>
         </div>
     </div>
 </body>

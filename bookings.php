@@ -29,7 +29,7 @@
     <!-- Hotel 1 -->
     <div class="hotel-card">
         <div class="hotel-image">
-            <img src="images/marino_beach.jpg" alt="Breeze Resort">
+            <img src="source/Images/Breeze_Resort.png" alt="Breeze Resort">
         </div>
         <div class="hotel-info">
             <h2>Breeze Resort</h2>

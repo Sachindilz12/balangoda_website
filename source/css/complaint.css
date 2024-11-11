@@ -1,61 +1,75 @@
+/* General Body Styling */
 body {
     font-family: Arial, sans-serif;
     background-color: #f4f4f4;
     margin: 0;
-    padding: 20px;
+    padding: 0;
 }
 
+/* Container for the content */
 .container {
-    max-width: 600px;
-    margin: auto;
+    max-width: 800px;
+    margin: 20px auto;
     background: #fff;
     padding: 20px;
-    border-radius: 10px;
+    border-radius: 8px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
+/* Header Styling */
 h1, h2 {
-    color: #333;
+    text-align: center;
 }
 
-form {
-    margin-bottom: 30px;
+/* Request form container */
+.request-form {
+    margin-bottom: 20px;
 }
 
-input[type="text"], textarea, input[type="file"] {
+/* Label Styling */
+label {
+    display: block;
+    margin: 10px 0 5px;
+}
+
+/* Form Elements Styling */
+select, textarea, input[type="file"], input[type="text"], input[type="date"], input[type="tel"], button {
     width: 100%;
     padding: 10px;
-    margin: 10px 0;
-    border: 1px solid #ddd;
-    border-radius: 5px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
 }
 
+/* Specific button styles */
 button {
-    background-color: #28a745;
+    background-color: #5cb85c;
     color: white;
-    padding: 10px;
     border: none;
-    border-radius: 5px;
+    border-radius: 4px;
+    font-size: 16px;
     cursor: pointer;
-    transition: background-color 0.3s ease;
 }
 
 button:hover {
-    background-color: #218838;
+    background-color: #4cae4c;
 }
 
-.complaint-list {
+/* Complaint List Table */
+table {
+    width: 100%;
+    border-collapse: collapse;
     margin-top: 20px;
 }
 
-.complaint-box {
-    background-color: #f9f9f9;
-    border: 1px solid #ddd;
-    border-radius: 5px;
+/* Table Headers and Cells */
+th, td {
     padding: 10px;
-    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    text-align: left;
 }
 
-.complaint-box p {
-    margin: 5px 0;
+/* Table Header Background */
+th {
+    background-color: #f4f4f4;
 }

@@ -1,0 +1,77 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+body {
+    font-family: Poppins;
+    background-color: #f5f5f5;
+    margin: 0;
+    padding: 0;
+}
+
+.locations-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+h1 {
+    text-align: center;
+    font-size: 2.5em;
+    margin-bottom: 40px;
+    color: #fdfdfd;
+}
+
+.location-card {
+    display: flex;
+    margin-bottom: 30px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.location-card img {
+    width: 50%;
+    object-fit: cover;
+    border-radius: 8px 0 0 8px;
+}
+
+.location-details {
+    padding: 20px;
+    width: 50%;
+}
+
+.location-details h2 {
+    font-size: 1.8em;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.location-details p {
+    font-size: 1.1em;
+    line-height: 1.6;
+    color: #555;
+}
+
+.location-card.reverse {
+    flex-direction: row-reverse;
+}
+
+.location-card:hover {
+    transform: translateY(-5px);
+ background-color: #494949c2;
+    transition: all 0.8s ease;
+}
+.location-card:hover p,h2{
+    color: #e7e7e7;
+
+}
+.location-card:hover h2{
+    color: #e7e7e7;
+
+}
+
+
+.location-card:hover img {
+    transform: scale(1.05);
+    transition: all 0.8s ease;
+}
